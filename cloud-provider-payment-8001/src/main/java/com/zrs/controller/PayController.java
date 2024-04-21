@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 @RestController
@@ -80,6 +81,11 @@ public class PayController {
     @GetMapping(value = "/pay/get/info")
     private ResultData getInfoByConsul(@Value("${atguifu.info}") String atguiguInfo)
     {
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return ResultData.success("atguiguInfo: "+atguiguInfo+"\t"+"port: "+port);
     }
 
