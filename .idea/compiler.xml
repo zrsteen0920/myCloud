@@ -11,8 +11,10 @@
         <module name="cloud-provider-payment-8001" />
         <module name="cloud_consumer_order-80" />
         <module name="mybatis_generator" />
+        <module name="cloud_gateway" />
         <module name="cloud_consumer_feign_order80" />
         <module name="api_conmons" />
+        <module name="cloud_gateway_9527" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +28,7 @@
       <module name="cloud-provider-payment-8004" target="17" />
       <module name="cloud_api_conmons" target="17" />
       <module name="cloud_consumer_order" target="17" />
+      <module name="cloud_gateway" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
