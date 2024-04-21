@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-provider-payment-8002" />
+        <module name="cloud-provider-payment-8001" />
+        <module name="cloud_consumer_order-80" />
+        <module name="cloud-provider-payment-8004" />
+        <module name="cloud-provider-payment-8003" />
+        <module name="mybatis_generator" />
+        <module name="api_conmons" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-provider-payment" target="17" />
+      <module name="cloud-provider-payment-8001 (1)" target="17" />
+      <module name="cloud-provider-payment-8001 (2)" target="17" />
+      <module name="cloud-provider-payment-8002 (1)" target="17" />
+      <module name="cloud-provider-payment-8002 (2)" target="17" />
+      <module name="cloud-provider-payment-8002 (3)" target="17" />
+      <module name="cloud_api_conmons" target="17" />
+      <module name="cloud_consumer_order" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
