@@ -23,7 +23,7 @@ spring:
       circuitbreaker:
         enabled: true
         group:
-          enabled: true #没开分组永远不用分组的配置。精确优先、分组次之(开了分组)、默认最后
+          enabled: false #没开分组永远不用分组的配置。精确优先、分组次之(开了分组)、默认最后
 
       httpclient:
         hc5:
@@ -100,20 +100,39 @@ logging:
 #      cloud-payment-service:
 #        baseConfig: default
 
+
 ####resilience4j bulkhead 的例子
+#resilience4j:
+#  bulkhead:
+#    configs:
+#      default:
+#        maxConcurrentCalls: 2 # 隔离允许并发线程执行的最大数量
+#        maxWaitDuration: 1s # 当达到并发调用数量时，新的线程的阻塞时间，我只愿意等待1秒，过时不候进舱壁兜底fallback
+#    instances:
+#      cloud-payment-service:
+#        baseConfig: default
+#  timelimiter:
+#    configs:
+#      default:
+#        timeout-duration: 20s
+
+
+#resilience4j bulkhead -THREADPOOL的例子
 resilience4j:
-  bulkhead:
-    configs:
-      default:
-        maxConcurrentCalls: 2 # 隔离允许并发线程执行的最大数量
-        maxWaitDuration: 1s # 当达到并发调用数量时，新的线程的阻塞时间，我只愿意等待1秒，过时不候进舱壁兜底fallback
-    instances:
-      cloud-payment-service:
-        baseConfig: default
   timelimiter:
     configs:
       default:
-        timeout-duration: 20s
+        timeout-duration: 2s #timelimiter默认限制远程1s，超过报错不好演示效果所以加上10秒
+  thread-pool-bulkhead:
+    configs:
+      default:
+        core-thread-pool-size: 1
+        max-thread-pool-size: 1
+        queue-capacity: 1
+    instances:
+      cloud-payment-service:
+        baseConfig: default
+  # spring.cloud.openfeign.circuitbreaker.group.enabled 请设置为false 新启线程和原来主线程脱离
 
 
 
