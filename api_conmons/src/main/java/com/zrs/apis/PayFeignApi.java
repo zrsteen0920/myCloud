@@ -37,4 +37,13 @@ public interface PayFeignApi {
     public String myBulkhead(@PathVariable("id") Integer id);
 
 
+    /**
+     * Resilience4j Ratelimit 的例子
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/pay/ratelimit/{id}")
+    public String myRatelimit(@PathVariable("id") Integer id);
+
+
 }
