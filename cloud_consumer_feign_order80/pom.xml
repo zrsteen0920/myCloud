@@ -20,6 +20,7 @@
 
 
     <dependencies>
+
         <!--resilience4j-circuitbreaker-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -30,6 +31,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+        <!--resilience4j-bulkhead-->
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-bulkhead</artifactId>
+        </dependency>
+
+
 
 
         <!--openfeign-->
