@@ -16,6 +16,10 @@
         <module>api_conmons</module>
         <module>cloud_consumer_feign_order80</module>
         <module>cloud_gateway_9527</module>
+        <module>cloudalibaba_provider_payment_9001</module>
+        <module>cloudalibaba_provider_payment_9002</module>
+        <module>cloudalibaba_consumer_order_83</module>
+        <module>cloudalibaba_config_config_nacos_3377</module>
     </modules>
 
     <properties>
@@ -43,7 +47,7 @@
         <spring.boot.version>3.1.7</spring.boot.version>
         <spring.cloud.version>2022.0.4</spring.cloud.version>
 
-        <spring.cloud.alibaba.version>2022.0.0.0-RC2</spring.cloud.alibaba.version>
+        <spring.cloud.alibaba.version>2022.0.0.0</spring.cloud.alibaba.version>
         <micrometer-tracing.version>1.2.0</micrometer-tracing.version>
         <micrometer-observation.version>1.12.0</micrometer-observation.version>
         <feign-micrometer.version>12.5</feign-micrometer.version>

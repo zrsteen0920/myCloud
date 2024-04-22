@@ -10,9 +10,13 @@
         <module name="cloud-provider-payment-8002" />
         <module name="cloud-provider-payment-8001" />
         <module name="cloud_consumer_order-80" />
+        <module name="cloudalibaba_consumer_order_83" />
+        <module name="cloudalibaba_config_config_nacos_3377" />
         <module name="mybatis_generator" />
         <module name="cloud_gateway" />
+        <module name="cloudalibaba_provider_payment_9001" />
         <module name="cloud_consumer_feign_order80" />
+        <module name="cloudalibaba_provider_payment_9002" />
         <module name="api_conmons" />
         <module name="cloud_gateway_9527" />
       </profile>
@@ -29,6 +33,9 @@
       <module name="cloud_api_conmons" target="17" />
       <module name="cloud_consumer_order" target="17" />
       <module name="cloud_gateway" target="17" />
+      <module name="cloudalibaba_config_config_nacos" target="17" />
+      <module name="cloudalibaba_provider_payment_9001 (1)" target="17" />
+      <module name="cloudalibaba_provider_payment_9001 (2)" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
